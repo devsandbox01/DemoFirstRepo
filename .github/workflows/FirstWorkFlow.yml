@@ -18,6 +18,7 @@ jobs:
 
   # second job
   echo-goodbye:
+    needs: hello-job # Requires the first job to complete, so the jobs are sequences and not parallel
     runs-on: ubuntu-slim # Fixed: Changed from 'ubuntu-slim' to a valid runner
     steps:
       - name: Goodbye-World
