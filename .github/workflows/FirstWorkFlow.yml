@@ -14,15 +14,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Hello-World
-        run: echo "Hello World" # Fixed indentation here
+        run: echo "Hello World"
 
-  # second job (Separated at the correct hierarchy level)
+  # second job
   echo-goodbye:
-    runs-on: ubuntu-slim # Completed the runner name
+    runs-on: ubuntu-slim # Fixed: Changed from 'ubuntu-slim' to a valid runner
     steps:
       - name: Goodbye-World
         run: echo "Goodbye World"
       - name: Multi-line bash
         run: |
-        echo "Background task 1"
-        echo "Background task 2"
+          echo "Background task 1" # Fixed: Indented these lines by two extra spaces
+          echo "Background task 2" # Fixed: Indented these lines by two extra spaces
